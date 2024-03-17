@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--Light-grey);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--Off-white);
+    border-radius: 20px 20px 200px 20px;
+    padding: 2rem;
+}
+
+.form {
+    display: flex;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+}
+
+.date > label {
+    font-size: 0.9rem;
+    width: 50%;
+    color: var(--Smokey-grey);
+    font-weight: 700;
+}
+
+.date > input {
+    outline: none;
+    border: 1px solid var(--Light-grey);
+    padding: 1rem;
+    font-weight: 700;
+    width: 133px;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.date > input:focus {
+    border-color: #864dff;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #864dff;
+    font-weight: bold;
+    color: #fff;
+    font-size: 35px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 500ms;
+}
+
+.btn:hover {
+    background-color: #986bfa;
+}
+
+.btnhr {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.hr {
+    width: 90%;
+    border-color: var(--Light-grey);
+}
+
+.date-container{
+    padding: 1rem;
+}
+
+.date-container span {
+    color: #864dff;
+    font-style: italic;
+}
+
+.date-container h1 {
+    font-size: 4rem;
+}
+
+span{
+    padding-right: 2rem;
+}
+
+.hr2 {
+    display: none;
+}
+
+@media (max-width: 520px) {
+    .date {
+        text-align: center;
+    }
+
+    .date > input {
+        font-weight: 700;
+        width: 80px;
+
+    }
+
+    .hr {
+        width: 30%;
+    }
+
+    .btnhr {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .hr2 {
+        display: block;
+    }
+
+    .container {
+        border-radius: 20px;
+        padding: 1rem;
+    }
+
+    .input-container {
+        margin: 0 auto;
+    }
+
+    .date-container h1 {
+        font-size: 3rem;
+    }
+
+}
